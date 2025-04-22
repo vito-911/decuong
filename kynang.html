@@ -63,6 +63,21 @@
       border: 1px solid #ffeeba;
       border-radius: 5px;
     }
+
+    #searchBox {
+      margin-bottom: 20px;
+      padding: 10px;
+      width: 300px;
+    }
+
+    .item {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 
@@ -75,7 +90,7 @@
   <nav>
     <a href="index.html">← Quay lại Trang chủ</a>
   </nav>
-
+  <input type="text" id="searchBox" placeholder="Tìm kiếm nội dung..." onkeyup="searchContent()">
   <div class="question-block">
     <h3>1. Phương án nào dưới đây giải thích đúng về cách giải quyết vấn đề theo hệ thống:</h3>
     <ul>
@@ -390,18 +405,19 @@
 </body>
 
 </html>
+
 <script>
-  // Lấy tất cả đáp án trong câu hỏi
-  const questionBlocks = document.querySelectorAll('.question-block');
+  function searchContent() {
+    var input = document.getElementById('searchBox').value.toLowerCase();
+    var items = document.getElementsByClassName('question-block');
 
-  questionBlocks.forEach(block => {
-    const answers = block.querySelectorAll('li');
-    const explanation = block.querySelector('.explanation');
-
-    answers.forEach(answer => {
-      answer.addEventListener('click', () => {
-        explanation.style.display = 'block';
-      });
-    });
-  });
+    for (var i = 0; i < items.length; i++) {
+      var text = items[i].textContent.toLowerCase();
+      if (text.includes(input)) {
+        items[i].classList.remove('hidden');
+      } else {
+        items[i].classList.add('hidden');
+      }
+    }
+  }
 </script>
