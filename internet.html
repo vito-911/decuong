@@ -1751,4 +1751,12 @@
             }
         }
     }
+  // Lặp qua tất cả các câu hỏi
+  document.querySelectorAll('.question-block ul li').forEach(function(li) {
+    li.addEventListener('click', function() {
+      const questionBlock = li.closest('.question-block');
+      const explanation = questionBlock.querySelector('.explanation');
+      explanation.style.display = 'block';
+    });
+  });
 </script>
