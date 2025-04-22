@@ -63,6 +63,21 @@
             border: 1px solid #ffeeba;
             border-radius: 5px;
         }
+
+        #searchBox {
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -75,9 +90,7 @@
     <nav>
         <a href="index.html">← Quay lại Trang chủ</a>
     </nav>
-    <h1>Tìm kiếm câu hỏi</h1>
-    <input type="text" id="searchBox" placeholder="Nhập để tìm kiếm...">
-    <div id="results" class="result"></div>
+    <input type="text" id="searchBox" placeholder="Tìm kiếm nội dung..." onkeyup="searchContent()">
     <div class="question-block">
         <h3>1. Trong quá trình sử dụng diễn đàn lớp học, sinh viên KHÔNG thể thực hiện thao tác nào dưới đây?</h3>
         <ul>
@@ -846,845 +859,896 @@
             Địa chỉ IPv4 có 32 bit, được chia thành 4 octet, mỗi octet gồm 8 bit.
         </div>
     </div>
-        <!-- Câu hỏi 51 -->
-        <div class="question-block">
-            <h3>51. Để truy nhập đến một máy chủ, người dùng có thể dùng?</h3>
-            <ul>
-                <li class="correct-answer">A. Địa chỉ IP hoặc tên miền.</li>
-                <li>B. Bắt buộc phải dùng tên miền.</li>
-                <li>C. Địa chỉ IP hoặc tên miền hoặc địa chỉ vật lý.</li>
-                <li>D. Bắt buộc phải dùng địa chỉ IP.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Để truy nhập đến một máy chủ, người dùng có thể dùng địa chỉ IP hoặc tên miền. Tuy nhiên trên thực tế, người dùng không cần biết đến địa chỉ IP mà chỉ cần nhớ tên miền này là truy cập được.
-            </div>
+    <!-- Câu hỏi 51 -->
+    <div class="question-block">
+        <h3>51. Để truy nhập đến một máy chủ, người dùng có thể dùng?</h3>
+        <ul>
+            <li class="correct-answer">A. Địa chỉ IP hoặc tên miền.</li>
+            <li>B. Bắt buộc phải dùng tên miền.</li>
+            <li>C. Địa chỉ IP hoặc tên miền hoặc địa chỉ vật lý.</li>
+            <li>D. Bắt buộc phải dùng địa chỉ IP.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Để truy nhập đến một máy chủ, người dùng có thể dùng địa chỉ IP hoặc tên miền. Tuy nhiên trên thực tế, người
+            dùng không cần biết đến địa chỉ IP mà chỉ cần nhớ tên miền này là truy cập được.
         </div>
+    </div>
 
-        <!-- Câu hỏi 52 -->
-        <div class="question-block">
-            <h3>52. Mỗi octet trong địa chỉ IPv4 có giá trị trong khoảng nào?</h3>
-            <ul>
-                <li>A. Từ 0 đến 64.</li>
-                <li>B. Từ 0 đến 128.</li>
-                <li class="correct-answer">C. Từ 0 đến 255.</li>
-                <li>D. Từ 0 đến 32.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IPv4 có chiều dài 32 bit, gồm 4 octet, mỗi octet là 8 bit, có giá trị nằm trong khoảng [0..255]).
-            </div>
+    <!-- Câu hỏi 52 -->
+    <div class="question-block">
+        <h3>52. Mỗi octet trong địa chỉ IPv4 có giá trị trong khoảng nào?</h3>
+        <ul>
+            <li>A. Từ 0 đến 64.</li>
+            <li>B. Từ 0 đến 128.</li>
+            <li class="correct-answer">C. Từ 0 đến 255.</li>
+            <li>D. Từ 0 đến 32.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IPv4 có chiều dài 32 bit, gồm 4 octet, mỗi octet là 8 bit, có giá trị nằm trong khoảng [0..255]).
         </div>
+    </div>
 
-        <!-- Câu hỏi 53 -->
-        <div class="question-block">
-            <h3>53. Địa chỉ IP v6 sử dụng bao nhiêu bit để đánh địa chỉ?</h3>
-            <ul>
-                <li>A. 64</li>
-                <li>B. 256</li>
-                <li class="correct-answer">C. 128</li>
-                <li>D. 32</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IPv6 có chiều dài 128 bit, biểu diễn dưới dạng các cụm số hexa phân cách bởi dấu::, ví dụ 2001:0DC8::1005:2F43:0BCD:FFFF.
-            </div>
+    <!-- Câu hỏi 53 -->
+    <div class="question-block">
+        <h3>53. Địa chỉ IP v6 sử dụng bao nhiêu bit để đánh địa chỉ?</h3>
+        <ul>
+            <li>A. 64</li>
+            <li>B. 256</li>
+            <li class="correct-answer">C. 128</li>
+            <li>D. 32</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IPv6 có chiều dài 128 bit, biểu diễn dưới dạng các cụm số hexa phân cách bởi dấu::, ví dụ
+            2001:0DC8::1005:2F43:0BCD:FFFF.
         </div>
+    </div>
 
-        <!-- Câu hỏi 54 -->
-        <div class="question-block">
-            <h3>54. Tên miền nào sau đây KHÔNG thuộc về quốc gia Việt Nam?</h3>
-            <ul>
-                <li>A. tnu.org.vn</li>
-                <li>B. jnto.org.fr</li>
-                <li>C. jnto.edu.vn</li>
-                <li>D. tnu.edu.vn</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Tên miền vn là của quốc gia Việt Nam, còn tên miền fr là của quốc gia Pháp.
-            </div>
+    <!-- Câu hỏi 54 -->
+    <div class="question-block">
+        <h3>54. Tên miền nào sau đây KHÔNG thuộc về quốc gia Việt Nam?</h3>
+        <ul>
+            <li>A. tnu.org.vn</li>
+            <li>B. jnto.org.fr</li>
+            <li>C. jnto.edu.vn</li>
+            <li>D. tnu.edu.vn</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Tên miền vn là của quốc gia Việt Nam, còn tên miền fr là của quốc gia Pháp.
         </div>
+    </div>
 
-        <!-- Câu hỏi 55 -->
-        <div class="question-block">
-            <h3>55. Khẳng định nào sau đây là sai khi nói về phương thức kết nối quay số qua mạng điện thoại (Dial-up)?</h3>
-            <ul>
-                <li>A. Để kết nối, người dùng cần có một đường điện thoại và một modem.</li>
-                <li>B. Kiểu kết nối này có tốc độ chậm nhất trong các phương thức kết nối Internet.</li>
-                <li class="correct-answer">C. Kết nối kiểu này luôn thường trực 24/24.</li>
-                <li>D. Máy tính của người dùng kết nối với Modem và modem được kết nối tới đường điện thoại.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Người dùng kết nối với Internet thông qua mạng điện thoại. Người dùng cần có một đường điện thoại và một thiết bị kết nối là Modem. Máy tính của người dùng kết nối với Modem và Modem được kết nối tới đường điện thoại. Đây là phương thức kết nối chậm nhất trong số các công nghệ truy cập Internet.
-            </div>
+    <!-- Câu hỏi 55 -->
+    <div class="question-block">
+        <h3>55. Khẳng định nào sau đây là sai khi nói về phương thức kết nối quay số qua mạng điện thoại (Dial-up)?</h3>
+        <ul>
+            <li>A. Để kết nối, người dùng cần có một đường điện thoại và một modem.</li>
+            <li>B. Kiểu kết nối này có tốc độ chậm nhất trong các phương thức kết nối Internet.</li>
+            <li class="correct-answer">C. Kết nối kiểu này luôn thường trực 24/24.</li>
+            <li>D. Máy tính của người dùng kết nối với Modem và modem được kết nối tới đường điện thoại.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Người dùng kết nối với Internet thông qua mạng điện thoại. Người dùng cần có một đường điện thoại và một
+            thiết bị kết nối là Modem. Máy tính của người dùng kết nối với Modem và Modem được kết nối tới đường điện
+            thoại. Đây là phương thức kết nối chậm nhất trong số các công nghệ truy cập Internet.
         </div>
+    </div>
 
-        <!-- Câu hỏi 56 -->
-        <div class="question-block">
-            <h3>56. Địa chỉ IP nào không thể gán cho các thiết bị trên mạng?</h3>
-            <ul>
-                <li>A. Địa chỉ 10.10.10.10.</li>
-                <li>B. Địa chỉ IP công cộng.</li>
-                <li>C. Địa chỉ IP riêng.</li>
-                <li class="correct-answer">D. Địa chỉ quảng bá.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ quảng bá là một loại địa chỉ dành riêng và không thể gán cho các thiết bị trên mạng.
-            </div>
+    <!-- Câu hỏi 56 -->
+    <div class="question-block">
+        <h3>56. Địa chỉ IP nào không thể gán cho các thiết bị trên mạng?</h3>
+        <ul>
+            <li>A. Địa chỉ 10.10.10.10.</li>
+            <li>B. Địa chỉ IP công cộng.</li>
+            <li>C. Địa chỉ IP riêng.</li>
+            <li class="correct-answer">D. Địa chỉ quảng bá.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ quảng bá là một loại địa chỉ dành riêng và không thể gán cho các thiết bị trên mạng.
         </div>
+    </div>
 
-        <!-- Câu hỏi 57 -->
-        <div class="question-block">
-            <h3>57. Đâu là 1 địa chỉ IPv6 không hợp lệ?</h3>
-            <ul>
-                <li>A. 2001:0DC8:1005:2F43::ABC6</li>
-                <li>B. 2001:0DC8::1005:2F43:0BCD:ABC6</li>
-                <li class="correct-answer">C. 2001:0DC8::1005:2F43::ABC6</li>
-                <li>D. 2001:DC8::2F43:BCD:ABC6</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Dấu "::" chỉ xuất hiện duy nhất một lần trong địa chỉ IPv6.
-            </div>
+    <!-- Câu hỏi 57 -->
+    <div class="question-block">
+        <h3>57. Đâu là 1 địa chỉ IPv6 không hợp lệ?</h3>
+        <ul>
+            <li>A. 2001:0DC8:1005:2F43::ABC6</li>
+            <li>B. 2001:0DC8::1005:2F43:0BCD:ABC6</li>
+            <li class="correct-answer">C. 2001:0DC8::1005:2F43::ABC6</li>
+            <li>D. 2001:DC8::2F43:BCD:ABC6</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Dấu "::" chỉ xuất hiện duy nhất một lần trong địa chỉ IPv6.
         </div>
+    </div>
 
-        <!-- Câu hỏi 58 -->
-        <div class="question-block">
-            <h3>58. Dấu:: xuất hiện tối đa là bao nhiêu lần trong địa chỉ IPv6?</h3>
-            <ul>
-                <li>A. 4</li>
-                <li>B. 1</li>
-                <li>C. 3</li>
-                <li>D. 2</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Dấu "::" chỉ xuất hiện duy nhất 1 lần trong địa chỉ IPv6.
-            </div>
+    <!-- Câu hỏi 58 -->
+    <div class="question-block">
+        <h3>58. Dấu:: xuất hiện tối đa là bao nhiêu lần trong địa chỉ IPv6?</h3>
+        <ul>
+            <li>A. 4</li>
+            <li>B. 1</li>
+            <li>C. 3</li>
+            <li>D. 2</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Dấu "::" chỉ xuất hiện duy nhất 1 lần trong địa chỉ IPv6.
         </div>
+    </div>
 
-        <!-- Câu hỏi 59 -->
-        <div class="question-block">
-            <h3>59. RARP là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li>A. Reverse Access Resolution Protocol</li>
-                <li class="correct-answer">B. Reverse Address Resolution Protocol.</li>
-                <li>C. Replace Address Resolution Protocol</li>
-                <li>D. Replace Access Resolution Protocol.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                RARP (Reverse Address Resolution Protocol) là giao thức chuyển địa chỉ vật lý MAC thành địa chỉ mạng IP.
-            </div>
+    <!-- Câu hỏi 59 -->
+    <div class="question-block">
+        <h3>59. RARP là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li>A. Reverse Access Resolution Protocol</li>
+            <li class="correct-answer">B. Reverse Address Resolution Protocol.</li>
+            <li>C. Replace Address Resolution Protocol</li>
+            <li>D. Replace Access Resolution Protocol.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            RARP (Reverse Address Resolution Protocol) là giao thức chuyển địa chỉ vật lý MAC thành địa chỉ mạng IP.
         </div>
+    </div>
 
-        <!-- Câu hỏi 60 -->
-        <div class="question-block">
-            <h3>60. Đâu là 1 bộ giao thức kết nối mạng?</h3>
-            <ul>
-                <li class="correct-answer">A. TCP/IP</li>
-                <li>B. HTTP</li>
-                <li>C. HTTPs</li>
-                <li>D. HTML</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                IPX/SPX, TCP/IP, NetBEUI là các giao thức kết nối mạng. Còn HTML (HyperText Markup Languages) là ngôn ngữ đánh dấu siêu văn bản.
-            </div>
+    <!-- Câu hỏi 60 -->
+    <div class="question-block">
+        <h3>60. Đâu là 1 bộ giao thức kết nối mạng?</h3>
+        <ul>
+            <li class="correct-answer">A. TCP/IP</li>
+            <li>B. HTTP</li>
+            <li>C. HTTPs</li>
+            <li>D. HTML</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            IPX/SPX, TCP/IP, NetBEUI là các giao thức kết nối mạng. Còn HTML (HyperText Markup Languages) là ngôn ngữ
+            đánh dấu siêu văn bản.
         </div>
-        <!-- Câu hỏi 61 -->
-        <div class="question-block">
-            <h3>61. Đâu là một phương thức kết nối Internet?</h3>
-            <ul>
-                <li>A. TCP/IP</li>
-                <li>B. NetBEUI</li>
-                <li class="correct-answer">C. Leased-Line</li>
-                <li>D. IPX/SPX</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Dial-up, Leased-Line, Wi-Fi là các phương thức truy cập Internet. Còn TCP/IP, NetBEUI, IPX/SPX là bộ giao thức kết nối mạng.
-            </div>
+    </div>
+    <!-- Câu hỏi 61 -->
+    <div class="question-block">
+        <h3>61. Đâu là một phương thức kết nối Internet?</h3>
+        <ul>
+            <li>A. TCP/IP</li>
+            <li>B. NetBEUI</li>
+            <li class="correct-answer">C. Leased-Line</li>
+            <li>D. IPX/SPX</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Dial-up, Leased-Line, Wi-Fi là các phương thức truy cập Internet. Còn TCP/IP, NetBEUI, IPX/SPX là bộ giao
+            thức kết nối mạng.
         </div>
+    </div>
 
-        <!-- Câu hỏi 62 -->
-        <div class="question-block">
-            <h3>62. Địa chỉ IPv6 biểu diễn dưới dạng bao nhiêu cụm số hệ mười sáu phân cách bởi dấu hai chấm (:)?</h3>
-            <ul>
-                <li>A. 32</li>
-                <li>B. 16</li>
-                <li>C. 4</li>
-                <li class="correct-answer">D. 8</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IPv6 có chiều dài 128 bit, biểu diễn dưới dạng các cụm số hệ mười sáu phân cách bởi dấu hai chấm (:). Mỗi phần dài 16 bit → Có 128/16 bằng 8 cụm số hệ 16.
-            </div>
+    <!-- Câu hỏi 62 -->
+    <div class="question-block">
+        <h3>62. Địa chỉ IPv6 biểu diễn dưới dạng bao nhiêu cụm số hệ mười sáu phân cách bởi dấu hai chấm (:)?</h3>
+        <ul>
+            <li>A. 32</li>
+            <li>B. 16</li>
+            <li>C. 4</li>
+            <li class="correct-answer">D. 8</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IPv6 có chiều dài 128 bit, biểu diễn dưới dạng các cụm số hệ mười sáu phân cách bởi dấu hai chấm
+            (:). Mỗi phần dài 16 bit → Có 128/16 bằng 8 cụm số hệ 16.
         </div>
+    </div>
 
-        <!-- Câu hỏi 63 -->
-        <div class="question-block">
-            <h3>63. Trong các khẳng định sau khẳng định nào là SAI?</h3>
-            <ul>
-                <li>A. Địa chỉ IP khó nhớ hơn tên miền.</li>
-                <li>B. Địa chỉ IP là duy nhất.</li>
-                <li>C. Tên miền khó nhớ hơn địa chỉ IP</li>
-                <li class="correct-answer">D. Tên miền là duy nhất.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Với cấu trúc địa chỉ IP, người sử dụng sẽ khó nhớ được địa chỉ IP dẫn đến việc sử dụng dịch vụ từ một máy tính nào đó là rất khó khăn. Để thuận tiện cho người sử dụng, một tên tượng trưng sẽ được sử dụng thay thế cho địa chỉ IP. Tên tượng trưng này được gọi là tên miền. Như vậy tên miền dễ nhớ hơn địa chỉ IP.
-            </div>
+    <!-- Câu hỏi 63 -->
+    <div class="question-block">
+        <h3>63. Trong các khẳng định sau khẳng định nào là SAI?</h3>
+        <ul>
+            <li>A. Địa chỉ IP khó nhớ hơn tên miền.</li>
+            <li>B. Địa chỉ IP là duy nhất.</li>
+            <li>C. Tên miền khó nhớ hơn địa chỉ IP</li>
+            <li class="correct-answer">D. Tên miền là duy nhất.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Với cấu trúc địa chỉ IP, người sử dụng sẽ khó nhớ được địa chỉ IP dẫn đến việc sử dụng dịch vụ từ một máy
+            tính nào đó là rất khó khăn. Để thuận tiện cho người sử dụng, một tên tượng trưng sẽ được sử dụng thay thế
+            cho địa chỉ IP. Tên tượng trưng này được gọi là tên miền. Như vậy tên miền dễ nhớ hơn địa chỉ IP.
         </div>
+    </div>
 
-        <!-- Câu hỏi 64 -->
-        <div class="question-block">
-            <h3>64. Khi nói về ipv4 và ipv6, hãy lựa chọn Khẳng định nào sau đây là SAI?</h3>
-            <ul>
-                <li>A. IPv6 hỗ trợ bảo mật tốt hơn IPv4.</li>
-                <li>B. Không gian địa chỉ IPv4 lớn hơn và dễ dàng quản lý không gian địa chỉ IPv6.</li>
-                <li class="correct-answer">C. Không gian địa chỉ Ipv6 lớn hơn và dễ dàng quản lý không gian địa chỉ IPv4.</li>
-                <li>D. Cấu trúc định tuyến của IPv6 tốt hơn IPv4.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                IPv6 được thiết kế với những tham vọng và mục tiêu như: Không gian địa chỉ lớn hơn và dễ dàng quản lý không gian địa chỉ, Cấu trúc định tuyến tốt hơn, Hỗ trợ bảo mật tốt hơn…
-            </div>
+    <!-- Câu hỏi 64 -->
+    <div class="question-block">
+        <h3>64. Khi nói về ipv4 và ipv6, hãy lựa chọn Khẳng định nào sau đây là SAI?</h3>
+        <ul>
+            <li>A. IPv6 hỗ trợ bảo mật tốt hơn IPv4.</li>
+            <li>B. Không gian địa chỉ IPv4 lớn hơn và dễ dàng quản lý không gian địa chỉ IPv6.</li>
+            <li class="correct-answer">C. Không gian địa chỉ Ipv6 lớn hơn và dễ dàng quản lý không gian địa chỉ IPv4.
+            </li>
+            <li>D. Cấu trúc định tuyến của IPv6 tốt hơn IPv4.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            IPv6 được thiết kế với những tham vọng và mục tiêu như: Không gian địa chỉ lớn hơn và dễ dàng quản lý không
+            gian địa chỉ, Cấu trúc định tuyến tốt hơn, Hỗ trợ bảo mật tốt hơn…
         </div>
+    </div>
 
-        <!-- Câu hỏi 65 -->
-        <div class="question-block">
-            <h3>65. Để các máy tính trên Internet có thể liên lạc với nhau, mỗi máy tính cần có một địa chỉ liên lạc và địa chỉ này được gọi là gì?</h3>
-            <ul>
-                <li class="correct-answer">A. Địa chỉ IP</li>
-                <li>B. Địa chỉ URL</li>
-                <li>C. Địa chỉ TCP</li>
-                <li>D. Địa chỉ Web.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Các máy tính trên Internet giao tiếp với nhau sử dụng bộ giao thức TCP/IP. Để các máy tính có thể liên lạc với nhau, mỗi máy tính cần có một địa chỉ liên lạc và địa chỉ này phải là duy nhất. Bộ giao thức TCP/IP sử dụng địa chỉ IP để đánh địa chỉ cho các máy tính trong mạng.
-            </div>
+    <!-- Câu hỏi 65 -->
+    <div class="question-block">
+        <h3>65. Để các máy tính trên Internet có thể liên lạc với nhau, mỗi máy tính cần có một địa chỉ liên lạc và địa
+            chỉ này được gọi là gì?</h3>
+        <ul>
+            <li class="correct-answer">A. Địa chỉ IP</li>
+            <li>B. Địa chỉ URL</li>
+            <li>C. Địa chỉ TCP</li>
+            <li>D. Địa chỉ Web.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Các máy tính trên Internet giao tiếp với nhau sử dụng bộ giao thức TCP/IP. Để các máy tính có thể liên lạc
+            với nhau, mỗi máy tính cần có một địa chỉ liên lạc và địa chỉ này phải là duy nhất. Bộ giao thức TCP/IP sử
+            dụng địa chỉ IP để đánh địa chỉ cho các máy tính trong mạng.
         </div>
+    </div>
 
-        <!-- Câu hỏi 66 -->
-        <div class="question-block">
-            <h3>66. Trong tên miền, dấu nào được sử dụng làm dấu phân cách?</h3>
-            <ul>
-                <li>A. Dấu gạch dưới (_)</li>
-                <li>B. Dấu cách ( )</li>
-                <li>C. Dấu hỏi (?)</li>
-                <li class="correct-answer">D. Dấu chấm (.)</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Để quản lý các máy đặt tại những vị trí vật lý khác nhau trên hệ thống mạng nhưng thuộc cùng một tổ chức, cùng lĩnh vực hoạt động… người ta nhóm các máy này vào một tên miền (Domain). Trong miền này nếu có những tổ chức nhỏ hơn, lĩnh vực hoạt động hẹp hơn… thì được chia thành các miền con (Sub Domain). Tên miền dùng dấu chấm (.) làm dấu phân cách. Cấu trúc miền và các miền con giống như một cây phân cấp.
-            </div>
+    <!-- Câu hỏi 66 -->
+    <div class="question-block">
+        <h3>66. Trong tên miền, dấu nào được sử dụng làm dấu phân cách?</h3>
+        <ul>
+            <li>A. Dấu gạch dưới (_)</li>
+            <li>B. Dấu cách ( )</li>
+            <li>C. Dấu hỏi (?)</li>
+            <li class="correct-answer">D. Dấu chấm (.)</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Để quản lý các máy đặt tại những vị trí vật lý khác nhau trên hệ thống mạng nhưng thuộc cùng một tổ chức,
+            cùng lĩnh vực hoạt động… người ta nhóm các máy này vào một tên miền (Domain). Trong miền này nếu có những tổ
+            chức nhỏ hơn, lĩnh vực hoạt động hẹp hơn… thì được chia thành các miền con (Sub Domain). Tên miền dùng dấu
+            chấm (.) làm dấu phân cách. Cấu trúc miền và các miền con giống như một cây phân cấp.
         </div>
+    </div>
 
-        <!-- Câu hỏi 67 -->
-        <div class="question-block">
-            <h3>67. Các cụm số hexa trong địa chỉ IPv6 được tách biệt với nhau bằng dấu nào?</h3>
-            <ul>
-                <li>A. Dấu hỏi “?”</li>
-                <li>B. Dấu nhân “*”</li>
-                <li>C. Dấu chấm “.”</li>
-                <li class="correct-answer">D. Dấu hai chấm “:”</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IPv6 có chiều dài 128 bit, biểu diễn dưới dạng các cụm số hexa phân cách bởi dấu ":".
-            </div>
+    <!-- Câu hỏi 67 -->
+    <div class="question-block">
+        <h3>67. Các cụm số hexa trong địa chỉ IPv6 được tách biệt với nhau bằng dấu nào?</h3>
+        <ul>
+            <li>A. Dấu hỏi “?”</li>
+            <li>B. Dấu nhân “*”</li>
+            <li>C. Dấu chấm “.”</li>
+            <li class="correct-answer">D. Dấu hai chấm “:”</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IPv6 có chiều dài 128 bit, biểu diễn dưới dạng các cụm số hexa phân cách bởi dấu ":".
         </div>
+    </div>
 
-        <!-- Câu hỏi 68 -->
-        <div class="question-block">
-            <h3>68. Phương thức kết nối nào là chậm nhất trong số các công nghệ truy cập Internet?</h3>
-            <ul>
-                <li class="correct-answer">A. Quay số qua mạng điện thoại (Dial-up)</li>
-                <li>B. Kết nối băng rộng</li>
-                <li>C. Kết nối không dây</li>
-                <li>D. Kết nối thông qua kênh thuê riêng (Leased-Line)</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Đây là phương thức truy cập Internet thông qua đường dây điện thoại bằng cách quay số tới số của nhà cung cấp dịch vụ Internet. Trên lý thuyết, tốc độ kết nối của dial-up dao động từ 20-56Kbps, trong thực tế khó có thể đạt được tốc độ 56Kbps.
-            </div>
+    <!-- Câu hỏi 68 -->
+    <div class="question-block">
+        <h3>68. Phương thức kết nối nào là chậm nhất trong số các công nghệ truy cập Internet?</h3>
+        <ul>
+            <li class="correct-answer">A. Quay số qua mạng điện thoại (Dial-up)</li>
+            <li>B. Kết nối băng rộng</li>
+            <li>C. Kết nối không dây</li>
+            <li>D. Kết nối thông qua kênh thuê riêng (Leased-Line)</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Đây là phương thức truy cập Internet thông qua đường dây điện thoại bằng cách quay số tới số của nhà cung
+            cấp dịch vụ Internet. Trên lý thuyết, tốc độ kết nối của dial-up dao động từ 20-56Kbps, trong thực tế khó có
+            thể đạt được tốc độ 56Kbps.
         </div>
+    </div>
 
-        <!-- Câu hỏi 69 -->
-        <div class="question-block">
-            <h3>69. Hotspot là một địa điểm mà tại đó có cung cấp các dịch vụ:</h3>
-            <ul>
-                <li class="correct-answer">A. Kết nối không dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu phát không dây</li>
-                <li>B. Kết nối có dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu phát không dây</li>
-                <li>C. Kết nối không dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu phát có dây</li>
-                <li>D. Kết nối có dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu phát có dây</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Hotspot là một địa điểm mà tại đó có cung cấp các dịch vụ kết nối không dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu phát không dây (Wireless Access Point).
-            </div>
+    <!-- Câu hỏi 69 -->
+    <div class="question-block">
+        <h3>69. Hotspot là một địa điểm mà tại đó có cung cấp các dịch vụ:</h3>
+        <ul>
+            <li class="correct-answer">A. Kết nối không dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động
+                của các thiết bị thu phát không dây</li>
+            <li>B. Kết nối có dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu phát
+                không dây</li>
+            <li>C. Kết nối không dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu
+                phát có dây</li>
+            <li>D. Kết nối có dây và dịch vụ truy cập Internet tốc độ cao thông qua hoạt động của các thiết bị thu phát
+                có dây</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Hotspot là một địa điểm mà tại đó có cung cấp các dịch vụ kết nối không dây và dịch vụ truy cập Internet tốc
+            độ cao thông qua hoạt động của các thiết bị thu phát không dây (Wireless Access Point).
         </div>
+    </div>
 
-        <!-- Câu hỏi 70 -->
-        <div class="question-block">
-            <h3>70. Trong các tên dưới đây đâu là 1 tên miền không hợp lệ?</h3>
-            <ul>
-                <li>A. tnu.edu.vn</li>
-                <li class="correct-answer">B. tnu.edu&vn</li>
-                <li>C. tnu.edu-vn</li>
-                <li>D. tnu-edu.vn</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Tên miền được đặt bằng các chữ số và chữ cái (a-z A-Z 0-9) và ký tự “-”. 
-            </div>
+    <!-- Câu hỏi 70 -->
+    <div class="question-block">
+        <h3>70. Trong các tên dưới đây đâu là 1 tên miền không hợp lệ?</h3>
+        <ul>
+            <li>A. tnu.edu.vn</li>
+            <li class="correct-answer">B. tnu.edu&vn</li>
+            <li>C. tnu.edu-vn</li>
+            <li>D. tnu-edu.vn</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Tên miền được đặt bằng các chữ số và chữ cái (a-z A-Z 0-9) và ký tự “-”.
         </div>
-        <!-- Câu hỏi 71 -->
-        <div class="question-block">
-            <h3>71. Đâu là một địa chỉ IPv4 không hợp lệ?</h3>
-            <ul>
-                <li class="correct-answer">A. 256.168.254.50</li>
-                <li>B. 102.254.200.25</li>
-                <li>C. 162.198.101.69</li>
-                <li>D. 192.182.10.254</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IPv4 có chiều dài 32 bit, gồm 4 octet, mỗi octet là 8 bit, có giá trị nằm trong khoảng [0..255]). Địa chỉ IPv4 được biểu diễn dưới dạng 4 cụm số thập phân phân cách bởi dấu chấm, ví dụ 203.119.9.0. Do đó, 256 không phải là giá trị hợp lệ cho một octet.
-            </div>
+    </div>
+    <!-- Câu hỏi 71 -->
+    <div class="question-block">
+        <h3>71. Đâu là một địa chỉ IPv4 không hợp lệ?</h3>
+        <ul>
+            <li class="correct-answer">A. 256.168.254.50</li>
+            <li>B. 102.254.200.25</li>
+            <li>C. 162.198.101.69</li>
+            <li>D. 192.182.10.254</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IPv4 có chiều dài 32 bit, gồm 4 octet, mỗi octet là 8 bit, có giá trị nằm trong khoảng [0..255]).
+            Địa chỉ IPv4 được biểu diễn dưới dạng 4 cụm số thập phân phân cách bởi dấu chấm, ví dụ 203.119.9.0. Do đó,
+            256 không phải là giá trị hợp lệ cho một octet.
         </div>
+    </div>
 
-        <!-- Câu hỏi 72 -->
-        <div class="question-block">
-            <h3>72. Khẳng định nào sau đây là SAI khi nói về trình duyệt web?</h3>
-            <ul>
-                <li>A. Là một phần mềm ứng dụng được cài đặt trên máy tính của người sử dụng.</li>
-                <li>B. Là một phần mềm ứng dụng được cài đặt để sử dụng dịch vụ WWW.</li>
-                <li>C. Cho phép người dùng duyệt các tài liệu siêu văn bản trên Web.</li>
-                <li class="correct-answer">D. Là một phần mềm hệ thống được cài đặt trên máy tính của người sử dụng.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Trình duyệt Web là một phần mềm ứng dụng được cài đặt trên máy tính của người sử dụng (máy trạm). Phần mềm này cho phép người dùng duyệt các tài liệu siêu văn bản trên Web. Không phải là phần mềm hệ thống.
-            </div>
+    <!-- Câu hỏi 72 -->
+    <div class="question-block">
+        <h3>72. Khẳng định nào sau đây là SAI khi nói về trình duyệt web?</h3>
+        <ul>
+            <li>A. Là một phần mềm ứng dụng được cài đặt trên máy tính của người sử dụng.</li>
+            <li>B. Là một phần mềm ứng dụng được cài đặt để sử dụng dịch vụ WWW.</li>
+            <li>C. Cho phép người dùng duyệt các tài liệu siêu văn bản trên Web.</li>
+            <li class="correct-answer">D. Là một phần mềm hệ thống được cài đặt trên máy tính của người sử dụng.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Trình duyệt Web là một phần mềm ứng dụng được cài đặt trên máy tính của người sử dụng (máy trạm). Phần mềm
+            này cho phép người dùng duyệt các tài liệu siêu văn bản trên Web. Không phải là phần mềm hệ thống.
         </div>
+    </div>
 
-        <!-- Câu hỏi 73 -->
-        <div class="question-block">
-            <h3>73. Địa chỉ IP v4 sử dụng bao nhiêu bit để đánh địa chỉ?</h3>
-            <ul>
-                <li class="correct-answer">A. 32</li>
-                <li>B. 128</li>
-                <li>C. 256</li>
-                <li>D. 64</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IPv4 có chiều dài 32 bit, gồm 4 octet, mỗi octet là 8 bit, có giá trị nằm trong khoảng [0..255]). Địa chỉ IPv4 được biểu diễn dưới dạng 4 cụm số thập phân phân cách bởi dấu chấm.
-            </div>
+    <!-- Câu hỏi 73 -->
+    <div class="question-block">
+        <h3>73. Địa chỉ IP v4 sử dụng bao nhiêu bit để đánh địa chỉ?</h3>
+        <ul>
+            <li class="correct-answer">A. 32</li>
+            <li>B. 128</li>
+            <li>C. 256</li>
+            <li>D. 64</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IPv4 có chiều dài 32 bit, gồm 4 octet, mỗi octet là 8 bit, có giá trị nằm trong khoảng [0..255]).
+            Địa chỉ IPv4 được biểu diễn dưới dạng 4 cụm số thập phân phân cách bởi dấu chấm.
         </div>
+    </div>
 
-        <!-- Câu hỏi 74 -->
-        <div class="question-block">
-            <h3>74. Khi đặt tên miền không được dùng ký tự nào dưới đây?</h3>
-            <ul>
-                <li>A. Các chữ số</li>
-                <li class="correct-answer">B. Ký tự @</li>
-                <li>C. Các chữ cái</li>
-                <li>D. Ký tự “-”</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Tên miền được đặt bằng các chữ số và chữ cái (a-z A-Z 0-9) và ký tự “-”. Không thể sử dụng ký tự "@" trong tên miền.
-            </div>
+    <!-- Câu hỏi 74 -->
+    <div class="question-block">
+        <h3>74. Khi đặt tên miền không được dùng ký tự nào dưới đây?</h3>
+        <ul>
+            <li>A. Các chữ số</li>
+            <li class="correct-answer">B. Ký tự @</li>
+            <li>C. Các chữ cái</li>
+            <li>D. Ký tự “-”</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Tên miền được đặt bằng các chữ số và chữ cái (a-z A-Z 0-9) và ký tự “-”. Không thể sử dụng ký tự "@" trong
+            tên miền.
         </div>
+    </div>
 
-        <!-- Câu hỏi 75 -->
-        <div class="question-block">
-            <h3>75. Đâu không phải là 1 bộ giao thức kết nối mạng?</h3>
-            <ul>
-                <li>A. NetBEUI</li>
-                <li>B. HTML</li>
-                <li>C. IPX/SPX</li>
-                <li>D. TCP/IP</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                IPX/SPX, TCP/IP, NetBEUI là các giao thức kết nối mạng. Còn HTML (HyperText Markup Languages) là ngôn ngữ đánh dấu siêu văn bản, không phải là giao thức kết nối mạng.
-            </div>
+    <!-- Câu hỏi 75 -->
+    <div class="question-block">
+        <h3>75. Đâu không phải là 1 bộ giao thức kết nối mạng?</h3>
+        <ul>
+            <li>A. NetBEUI</li>
+            <li>B. HTML</li>
+            <li>C. IPX/SPX</li>
+            <li>D. TCP/IP</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            IPX/SPX, TCP/IP, NetBEUI là các giao thức kết nối mạng. Còn HTML (HyperText Markup Languages) là ngôn ngữ
+            đánh dấu siêu văn bản, không phải là giao thức kết nối mạng.
         </div>
+    </div>
 
-        <!-- Câu hỏi 76 -->
-        <div class="question-block">
-            <h3>76. Đâu là một địa chỉ IPv4 hợp lệ?</h3>
-            <ul>
-                <li>A. 192:168:10:6</li>
-                <li>B. 192.168.10.256</li>
-                <li class="correct-answer">C. 192.168.10.6</li>
-                <li>D. 192:168:10:256</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IPv4 hợp lệ phải có 4 cụm số thập phân phân cách nhau bằng dấu chấm và mỗi octet phải có giá trị trong khoảng từ 0 đến 255.
-            </div>
+    <!-- Câu hỏi 76 -->
+    <div class="question-block">
+        <h3>76. Đâu là một địa chỉ IPv4 hợp lệ?</h3>
+        <ul>
+            <li>A. 192:168:10:6</li>
+            <li>B. 192.168.10.256</li>
+            <li class="correct-answer">C. 192.168.10.6</li>
+            <li>D. 192:168:10:256</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IPv4 hợp lệ phải có 4 cụm số thập phân phân cách nhau bằng dấu chấm và mỗi octet phải có giá trị
+            trong khoảng từ 0 đến 255.
         </div>
+    </div>
 
-        <!-- Câu hỏi 77 -->
-        <div class="question-block">
-            <h3>77. Có 2 khẳng định sau:</h3>
-            <p>- KĐ1: là loại hình kết nối Internet tốc độ cao</p>
-            <p>- KĐ2: luôn trong trạng thái kết nối 24/24.</p>
-            <h4>Nhận xét nào sau đây là đúng khi nói về phương thức kết nối Internet băng rộng?</h4>
-            <ul>
-                <li>A. KĐ1 sai, KĐ2 đúng.</li>
-                <li>B. KĐ1 sai, KĐ2 sai.</li>
-                <li>C. KĐ1 đúng, KĐ2 đúng.</li>
-                <li class="correct-answer">D. KĐ1 đúng, KĐ2 sai.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Truy cập Internet băng rộng, thường được gọi tắt là “Internet băng rộng” hoặc “băng rộng” – là loại hình kết nối Internet tốc độ cao và luôn trong trạng thái kết nối 24/24.
-            </div>
+    <!-- Câu hỏi 77 -->
+    <div class="question-block">
+        <h3>77. Có 2 khẳng định sau:</h3>
+        <p>- KĐ1: là loại hình kết nối Internet tốc độ cao</p>
+        <p>- KĐ2: luôn trong trạng thái kết nối 24/24.</p>
+        <h4>Nhận xét nào sau đây là đúng khi nói về phương thức kết nối Internet băng rộng?</h4>
+        <ul>
+            <li>A. KĐ1 sai, KĐ2 đúng.</li>
+            <li>B. KĐ1 sai, KĐ2 sai.</li>
+            <li>C. KĐ1 đúng, KĐ2 đúng.</li>
+            <li class="correct-answer">D. KĐ1 đúng, KĐ2 sai.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Truy cập Internet băng rộng, thường được gọi tắt là “Internet băng rộng” hoặc “băng rộng” – là loại hình kết
+            nối Internet tốc độ cao và luôn trong trạng thái kết nối 24/24.
         </div>
+    </div>
 
-        <!-- Câu hỏi 78 -->
-        <div class="question-block">
-            <h3>78. Tất cả các Web Server đều hiểu và chạy được file nào?</h3>
-            <ul>
-                <li>A. *.php</li>
-                <li>B. *.asp</li>
-                <li class="correct-answer">C. *.htm</li>
-                <li>D. *.jsp</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Tất cả các Web Server đều hiểu và chạy được các file *.htm và *.html, tuy nhiên mỗi Web Server lại phục vụ một số loại file cụ thể như PHP, ASP, JSP tùy thuộc vào cấu hình của Web Server đó.
-            </div>
+    <!-- Câu hỏi 78 -->
+    <div class="question-block">
+        <h3>78. Tất cả các Web Server đều hiểu và chạy được file nào?</h3>
+        <ul>
+            <li>A. *.php</li>
+            <li>B. *.asp</li>
+            <li class="correct-answer">C. *.htm</li>
+            <li>D. *.jsp</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Tất cả các Web Server đều hiểu và chạy được các file *.htm và *.html, tuy nhiên mỗi Web Server lại phục vụ
+            một số loại file cụ thể như PHP, ASP, JSP tùy thuộc vào cấu hình của Web Server đó.
         </div>
+    </div>
 
-        <!-- Câu hỏi 79 -->
-        <div class="question-block">
-            <h3>79. Domain Name là gì?</h3>
-            <ul>
-                <li>A. Địa chỉ IPv4.</li>
-                <li>B. Địa chỉ IPv6.</li>
-                <li class="correct-answer">C. Tên miền.</li>
-                <li>D. Tên trang web.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Tên miền (Domain Name) là một tên tượng trưng thay thế cho địa chỉ IP trong việc định danh các dịch vụ trực tuyến.
-            </div>
+    <!-- Câu hỏi 79 -->
+    <div class="question-block">
+        <h3>79. Domain Name là gì?</h3>
+        <ul>
+            <li>A. Địa chỉ IPv4.</li>
+            <li>B. Địa chỉ IPv6.</li>
+            <li class="correct-answer">C. Tên miền.</li>
+            <li>D. Tên trang web.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Tên miền (Domain Name) là một tên tượng trưng thay thế cho địa chỉ IP trong việc định danh các dịch vụ trực
+            tuyến.
         </div>
+    </div>
 
-        <!-- Câu hỏi 80 -->
-        <div class="question-block">
-            <h3>80. Để khởi động trình duyệt web, bạn nhắp (click) chuột vào biểu tượng nào sau đây?</h3>
-            <ul>
-                <li>A. Biểu tượng Recycle Bin.</li>
-                <li class="correct-answer">B. Biểu tượng Internet Explorer.</li>
-                <li>C. Biểu tượng My Computer.</li>
-                <li>D. Biểu tượng Yahoo! Messenger.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Để khởi động trình duyệt web, bạn có thể nhấp đúp chuột vào biểu tượng Internet Explorer hoặc chọn từ menu Start trên máy tính.
-            </div>
+    <!-- Câu hỏi 80 -->
+    <div class="question-block">
+        <h3>80. Để khởi động trình duyệt web, bạn nhắp (click) chuột vào biểu tượng nào sau đây?</h3>
+        <ul>
+            <li>A. Biểu tượng Recycle Bin.</li>
+            <li class="correct-answer">B. Biểu tượng Internet Explorer.</li>
+            <li>C. Biểu tượng My Computer.</li>
+            <li>D. Biểu tượng Yahoo! Messenger.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Để khởi động trình duyệt web, bạn có thể nhấp đúp chuột vào biểu tượng Internet Explorer hoặc chọn từ menu
+            Start trên máy tính.
         </div>
+    </div>
 
-        <!-- Câu hỏi 81 -->
-        <div class="question-block">
-            <h3>81. Có 2 khẳng định sau:</h3>
-            <p>- KĐ1: Có tốc độ kết nối cao hơn ADSL.</p>
-            <p>- KĐ2: Cho phép chia sẻ chung với đường điện thoại.</p>
-            <h4>Nhận xét nào sau đây là đúng khi nói về công nghệ HDSL?</h4>
-            <ul>
-                <li class="correct-answer">A. KĐ1 đúng, KĐ2 sai.</li>
-                <li>B. KĐ1 đúng, KĐ2 đúng.</li>
-                <li>C. KĐ1 sai, KĐ2 sai.</li>
-                <li>D. KĐ1 sai, KĐ2 đúng.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                HDSL (High Bit Rate DSL): Có tốc độ kết nối cao hơn ADSL nhưng không cho phép chia sẻ chung với đường điện thoại.
-            </div>
+    <!-- Câu hỏi 81 -->
+    <div class="question-block">
+        <h3>81. Có 2 khẳng định sau:</h3>
+        <p>- KĐ1: Có tốc độ kết nối cao hơn ADSL.</p>
+        <p>- KĐ2: Cho phép chia sẻ chung với đường điện thoại.</p>
+        <h4>Nhận xét nào sau đây là đúng khi nói về công nghệ HDSL?</h4>
+        <ul>
+            <li class="correct-answer">A. KĐ1 đúng, KĐ2 sai.</li>
+            <li>B. KĐ1 đúng, KĐ2 đúng.</li>
+            <li>C. KĐ1 sai, KĐ2 sai.</li>
+            <li>D. KĐ1 sai, KĐ2 đúng.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            HDSL (High Bit Rate DSL): Có tốc độ kết nối cao hơn ADSL nhưng không cho phép chia sẻ chung với đường điện
+            thoại.
         </div>
-        <!-- Câu hỏi 82 -->
-        <div class="question-block">
-            <h3>82. Có 2 khẳng định sau:</h3>
-            <p>- KĐ1: Đây là công nghệ DSL đối xứng</p>
-            <p>- KĐ2: Để có thể kết nối Internet, người dùng sẽ cần phải lắp đặt một modem ADSL chuyên dụng.</p>
-            <h4>Nhận xét nào sau đây là đúng khi nói về công nghệ ADSL?</h4>
-            <ul>
-                <li>A. KĐ1 đúng, KĐ2 sai.</li>
-                <li class="correct-answer">B. KĐ1 sai, KĐ2 đúng.</li>
-                <li>C. KĐ1 sai, KĐ2 sai.</li>
-                <li>D. KĐ1 đúng, KĐ2 đúng.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                ADSL (Asymmetric Digital Subscriber Line) là công nghệ DSL bất đối xứng, không phải công nghệ đối xứng. Tuy nhiên, người dùng cần lắp đặt một modem ADSL để kết nối Internet.
-            </div>
+    </div>
+    <!-- Câu hỏi 82 -->
+    <div class="question-block">
+        <h3>82. Có 2 khẳng định sau:</h3>
+        <p>- KĐ1: Đây là công nghệ DSL đối xứng</p>
+        <p>- KĐ2: Để có thể kết nối Internet, người dùng sẽ cần phải lắp đặt một modem ADSL chuyên dụng.</p>
+        <h4>Nhận xét nào sau đây là đúng khi nói về công nghệ ADSL?</h4>
+        <ul>
+            <li>A. KĐ1 đúng, KĐ2 sai.</li>
+            <li class="correct-answer">B. KĐ1 sai, KĐ2 đúng.</li>
+            <li>C. KĐ1 sai, KĐ2 sai.</li>
+            <li>D. KĐ1 đúng, KĐ2 đúng.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            ADSL (Asymmetric Digital Subscriber Line) là công nghệ DSL bất đối xứng, không phải công nghệ đối xứng. Tuy
+            nhiên, người dùng cần lắp đặt một modem ADSL để kết nối Internet.
         </div>
+    </div>
 
-        <!-- Câu hỏi 83 -->
-        <div class="question-block">
-            <h3>83. Cho 2 khẳng định sau:</h3>
-            <p>- KĐ1: DSL bất đối xứng có tốc độ tải xuống (download) chậm.</p>
-            <p>- KĐ2: DSL bất đối xứng có tốc độ tải lên (upload) nhanh.</p>
-            <h4>Nhận xét nào sau đây là đúng?</h4>
-            <ul>
-                <li>A. KĐ1 sai, KĐ2 sai.</li>
-                <li>B. KĐ1 đúng, KĐ2 sai.</li>
-                <li>C. KĐ1 sai, KĐ2 đúng.</li>
-                <li class="correct-answer">D. KĐ1 đúng, KĐ2 đúng.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                DSL bất đối xứng (ADSL) có tốc độ tải xuống (download) nhanh hơn tốc độ tải lên (upload), do đó khẳng định về tải xuống là đúng nhưng khẳng định về tải lên là sai.
-            </div>
+    <!-- Câu hỏi 83 -->
+    <div class="question-block">
+        <h3>83. Cho 2 khẳng định sau:</h3>
+        <p>- KĐ1: DSL bất đối xứng có tốc độ tải xuống (download) chậm.</p>
+        <p>- KĐ2: DSL bất đối xứng có tốc độ tải lên (upload) nhanh.</p>
+        <h4>Nhận xét nào sau đây là đúng?</h4>
+        <ul>
+            <li>A. KĐ1 sai, KĐ2 sai.</li>
+            <li>B. KĐ1 đúng, KĐ2 sai.</li>
+            <li>C. KĐ1 sai, KĐ2 đúng.</li>
+            <li class="correct-answer">D. KĐ1 đúng, KĐ2 đúng.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            DSL bất đối xứng (ADSL) có tốc độ tải xuống (download) nhanh hơn tốc độ tải lên (upload), do đó khẳng định
+            về tải xuống là đúng nhưng khẳng định về tải lên là sai.
         </div>
+    </div>
 
-        <!-- Câu hỏi 84 -->
-        <div class="question-block">
-            <h3>84. Có mấy phiên bản địa chỉ IP?</h3>
-            <ul>
-                <li>A. 4</li>
-                <li>B. 3</li>
-                <li>C. 2</li>
-                <li class="correct-answer">D. 1</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Có 2 phiên bản địa chỉ IP: IPv4 và IPv6.
-            </div>
+    <!-- Câu hỏi 84 -->
+    <div class="question-block">
+        <h3>84. Có mấy phiên bản địa chỉ IP?</h3>
+        <ul>
+            <li>A. 4</li>
+            <li>B. 3</li>
+            <li>C. 2</li>
+            <li class="correct-answer">D. 1</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Có 2 phiên bản địa chỉ IP: IPv4 và IPv6.
         </div>
+    </div>
 
-        <!-- Câu hỏi 85 -->
-        <div class="question-block">
-            <h3>85. Khẳng định nào sau đây là sai khi nói về địa chỉ IP công cộng?</h3>
-            <ul>
-                <li>A. Là duy nhất.</li>
-                <li>B. Được lấy từ nhà cung cấp dịch vụ hay đăng ký với 1 chi phí nào đó.</li>
-                <li>C. Có tính toàn cầu và được tiêu chuẩn hóa.</li>
-                <li class="correct-answer">D. Không được định tuyến trên Internet Backbone.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Địa chỉ IP công cộng là duy nhất và có tính toàn cầu. Địa chỉ này được định tuyến trên Internet Backbone.
-            </div>
+    <!-- Câu hỏi 85 -->
+    <div class="question-block">
+        <h3>85. Khẳng định nào sau đây là sai khi nói về địa chỉ IP công cộng?</h3>
+        <ul>
+            <li>A. Là duy nhất.</li>
+            <li>B. Được lấy từ nhà cung cấp dịch vụ hay đăng ký với 1 chi phí nào đó.</li>
+            <li>C. Có tính toàn cầu và được tiêu chuẩn hóa.</li>
+            <li class="correct-answer">D. Không được định tuyến trên Internet Backbone.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Địa chỉ IP công cộng là duy nhất và có tính toàn cầu. Địa chỉ này được định tuyến trên Internet Backbone.
         </div>
+    </div>
 
-        <!-- Câu hỏi 86 -->
-        <div class="question-block">
-            <h3>86. Chiều dài tối đa của một tên miền đầy đủ là bao nhiêu ký tự?</h3>
-            <ul>
-                <li>A. 128</li>
-                <li>B. 255</li>
-                <li>C. 127</li>
-                <li>D. 256</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Tên miền đầy đủ có chiều dài tối đa là 255 ký tự.
-            </div>
+    <!-- Câu hỏi 86 -->
+    <div class="question-block">
+        <h3>86. Chiều dài tối đa của một tên miền đầy đủ là bao nhiêu ký tự?</h3>
+        <ul>
+            <li>A. 128</li>
+            <li>B. 255</li>
+            <li>C. 127</li>
+            <li>D. 256</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Tên miền đầy đủ có chiều dài tối đa là 255 ký tự.
         </div>
+    </div>
 
-        <!-- Câu hỏi 87 -->
-        <div class="question-block">
-            <h3>87. Đâu là tên của trình duyệt Web?</h3>
-            <ul>
-                <li class="correct-answer">A. Web Browser.</li>
-                <li>B. Web Explorer.</li>
-                <li>C. Internet Explorer.</li>
-                <li>D. Internet Browser.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Web Browser là thuật ngữ chung cho các trình duyệt web, trong đó Internet Explorer là một loại trình duyệt cụ thể.
-            </div>
+    <!-- Câu hỏi 87 -->
+    <div class="question-block">
+        <h3>87. Đâu là tên của trình duyệt Web?</h3>
+        <ul>
+            <li class="correct-answer">A. Web Browser.</li>
+            <li>B. Web Explorer.</li>
+            <li>C. Internet Explorer.</li>
+            <li>D. Internet Browser.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Web Browser là thuật ngữ chung cho các trình duyệt web, trong đó Internet Explorer là một loại trình duyệt
+            cụ thể.
         </div>
+    </div>
 
-        <!-- Câu hỏi 88 -->
-        <div class="question-block">
-            <h3>88. Trong mỗi cụm số hệ 16 (mỗi phần) của địa chỉ IPv6 có bao nhiêu ký số hệ 16?</h3>
-            <ul>
-                <li>A. 2</li>
-                <li>B. 4</li>
-                <li>C. 8</li>
-                <li class="correct-answer">D. 6</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Mỗi phần trong địa chỉ IPv6 (mỗi cụm số) có 4 ký tự hệ 16 (hexadecimal).
-            </div>
+    <!-- Câu hỏi 88 -->
+    <div class="question-block">
+        <h3>88. Trong mỗi cụm số hệ 16 (mỗi phần) của địa chỉ IPv6 có bao nhiêu ký số hệ 16?</h3>
+        <ul>
+            <li>A. 2</li>
+            <li>B. 4</li>
+            <li>C. 8</li>
+            <li class="correct-answer">D. 6</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Mỗi phần trong địa chỉ IPv6 (mỗi cụm số) có 4 ký tự hệ 16 (hexadecimal).
         </div>
+    </div>
 
-        <!-- Câu hỏi 89 -->
-        <div class="question-block">
-            <h3>89. Địa chỉ IPv4 có cấu trúc như thế nào?</h3>
-            <ul>
-                <li>A. A?B?C?D</li>
-                <li>B. A:B:C:D</li>
-                <li class="correct-answer">C. A.B.C.D</li>
-                <li>D. A,B,C,D</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Cấu trúc địa chỉ IPv4 là: A.B.C.D, trong đó A, B, C, D là các số nguyên từ 0 đến 255.
-            </div>
+    <!-- Câu hỏi 89 -->
+    <div class="question-block">
+        <h3>89. Địa chỉ IPv4 có cấu trúc như thế nào?</h3>
+        <ul>
+            <li>A. A?B?C?D</li>
+            <li>B. A:B:C:D</li>
+            <li class="correct-answer">C. A.B.C.D</li>
+            <li>D. A,B,C,D</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Cấu trúc địa chỉ IPv4 là: A.B.C.D, trong đó A, B, C, D là các số nguyên từ 0 đến 255.
         </div>
+    </div>
 
-        <!-- Câu hỏi 90 -->
-        <div class="question-block">
-            <h3>90. Internet được hình thành từ dự án nào sau đây?</h3>
-            <ul>
-                <li>A. Từ một dự án nghiên cứu của Bộ giáo dục Anh</li>
-                <li class="correct-answer">B. Từ một dự án nghiên cứu của Bộ quốc phòng Mỹ.</li>
-                <li>C. Từ một dự án nghiên cứu của Bộ giáo dục Mỹ</li>
-                <li>D. Từ một dự án nghiên cứu của Bộ quốc phòng Anh</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Internet được hình thành từ dự án ARPANET, một dự án nghiên cứu của Bộ Quốc phòng Mỹ vào năm 1969.
-            </div>
+    <!-- Câu hỏi 90 -->
+    <div class="question-block">
+        <h3>90. Internet được hình thành từ dự án nào sau đây?</h3>
+        <ul>
+            <li>A. Từ một dự án nghiên cứu của Bộ giáo dục Anh</li>
+            <li class="correct-answer">B. Từ một dự án nghiên cứu của Bộ quốc phòng Mỹ.</li>
+            <li>C. Từ một dự án nghiên cứu của Bộ giáo dục Mỹ</li>
+            <li>D. Từ một dự án nghiên cứu của Bộ quốc phòng Anh</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Internet được hình thành từ dự án ARPANET, một dự án nghiên cứu của Bộ Quốc phòng Mỹ vào năm 1969.
         </div>
-        <!-- Câu hỏi 91 -->
-        <div class="question-block">
-            <h3>91. TCP/IP là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li>A. Transport Control Processing/ Internet Processing.</li>
-                <li>B. Transmision Control Protocol/ Internet Protocol.</li>
-                <li>C. Transport Control Provider/ Internet Provider.</li>
-                <li>D. Telecoms Communication Protocol/ Internet Protocol.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                TCP/IP (Transmission Control Protocol/ Internet Protocol) là bộ giao thức Internet cho phép máy tính kết nối và giao tiếp với nhau.
-            </div>
+    </div>
+    <!-- Câu hỏi 91 -->
+    <div class="question-block">
+        <h3>91. TCP/IP là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li>A. Transport Control Processing/ Internet Processing.</li>
+            <li>B. Transmision Control Protocol/ Internet Protocol.</li>
+            <li>C. Transport Control Provider/ Internet Provider.</li>
+            <li>D. Telecoms Communication Protocol/ Internet Protocol.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            TCP/IP (Transmission Control Protocol/ Internet Protocol) là bộ giao thức Internet cho phép máy tính kết nối
+            và giao tiếp với nhau.
         </div>
+    </div>
 
-        <!-- Câu hỏi 92 -->
-        <div class="question-block">
-            <h3>92. Mạng đô thị MAN là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li>A. Metropolitan Address Network</li>
-                <li>B. Metropolitan Access Network</li>
-                <li>C. Metropolitan Application Network</li>
-                <li class="correct-answer">D. Metropolitan Area Network</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                MAN (Metropolitan Area Network) là mạng diện rộng cấp đô thị, nối kết các khu vực trong một thành phố lớn.
-            </div>
+    <!-- Câu hỏi 92 -->
+    <div class="question-block">
+        <h3>92. Mạng đô thị MAN là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li>A. Metropolitan Address Network</li>
+            <li>B. Metropolitan Access Network</li>
+            <li>C. Metropolitan Application Network</li>
+            <li class="correct-answer">D. Metropolitan Area Network</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            MAN (Metropolitan Area Network) là mạng diện rộng cấp đô thị, nối kết các khu vực trong một thành phố lớn.
         </div>
+    </div>
 
-        <!-- Câu hỏi 93 -->
-        <div class="question-block">
-            <h3>93. Khi nói về chức năng của các nhà cung cấp dịch vụ Internet ở Việt Nam, có 2 phát biểu như sau:</h3>
-            <p>- PB1: IAP có thể thực hiện cả chức năng của ISP nhưng ngược lại thì không.</p>
-            <p>- PB2: ICP cung cấp các dịch vụ trên cơ sở ứng dụng Internet như: mua bán qua mạng, giao dịch ngân hàng, tư vấn, đào tạo…</p>
-            <h4>Khẳng định nào sau đây là đúng?</h4>
-            <ul>
-                <li>A. PB1 đúng, PB2 sai</li>
-                <li>B. PB1 đúng, PB2 đúng</li>
-                <li>C. PB1 sai, PB2 sai</li>
-                <li class="correct-answer">D. PB1 sai, PB2 đúng</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                IAP là kết nối người dùng trực tiếp với Internet. ICP cung cấp các dịch vụ thông tin ứng dụng Internet như mua bán, giao dịch ngân hàng, tư vấn.
-            </div>
+    <!-- Câu hỏi 93 -->
+    <div class="question-block">
+        <h3>93. Khi nói về chức năng của các nhà cung cấp dịch vụ Internet ở Việt Nam, có 2 phát biểu như sau:</h3>
+        <p>- PB1: IAP có thể thực hiện cả chức năng của ISP nhưng ngược lại thì không.</p>
+        <p>- PB2: ICP cung cấp các dịch vụ trên cơ sở ứng dụng Internet như: mua bán qua mạng, giao dịch ngân hàng, tư
+            vấn, đào tạo…</p>
+        <h4>Khẳng định nào sau đây là đúng?</h4>
+        <ul>
+            <li>A. PB1 đúng, PB2 sai</li>
+            <li>B. PB1 đúng, PB2 đúng</li>
+            <li>C. PB1 sai, PB2 sai</li>
+            <li class="correct-answer">D. PB1 sai, PB2 đúng</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            IAP là kết nối người dùng trực tiếp với Internet. ICP cung cấp các dịch vụ thông tin ứng dụng Internet như
+            mua bán, giao dịch ngân hàng, tư vấn.
         </div>
+    </div>
 
-        <!-- Câu hỏi 94 -->
-        <div class="question-block">
-            <h3>94. IXP là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li>A. International Exchange Protocol</li>
-                <li>B. Improve External Protocol.</li>
-                <li>C. Internet Exchange Provider</li>
-                <li>D. Internet Extent Protocol.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                IXP (Internet Exchange Provider) là nhà cung cấp dịch vụ trao đổi Internet, giúp kết nối các ISP với nhau.
-            </div>
+    <!-- Câu hỏi 94 -->
+    <div class="question-block">
+        <h3>94. IXP là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li>A. International Exchange Protocol</li>
+            <li>B. Improve External Protocol.</li>
+            <li>C. Internet Exchange Provider</li>
+            <li>D. Internet Extent Protocol.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            IXP (Internet Exchange Provider) là nhà cung cấp dịch vụ trao đổi Internet, giúp kết nối các ISP với nhau.
         </div>
+    </div>
 
-        <!-- Câu hỏi 95 -->
-        <div class="question-block">
-            <h3>95. Khi nói về chức năng của các nhà cung cấp dịch vụ Internet ở Việt Nam, có 2 phát biểu như sau:</h3>
-            <p>- PB1: OSP cấp quyền truy cập Internet qua mạng viễn thông và các dịch vụ như: Email, Web, FTP, Telnet, Chat.</p>
-            <p>- PB2: ICP cung cấp các thông tin về: kinh tế, giáo dục, thể thao, chính trị, quân sự (thường xuyên cập nhật thông tin mới theo định kỳ) đưa lên mạng.</p>
-            <h4>Khẳng định nào sau đây là đúng?</h4>
-            <ul>
-                <li class="correct-answer">A. PB1 sai, PB2 đúng</li>
-                <li>B. PB1 sai, PB2 sai</li>
-                <li>C. PB1 đúng, PB2 đúng</li>
-                <li>D. PB1 đúng, PB2 sai</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                OSP là nhà cung cấp dịch vụ ứng dụng Internet (mua bán qua mạng, ngân hàng điện tử,...) và ICP cung cấp thông tin về nhiều lĩnh vực như kinh tế, giáo dục, thể thao,...
-            </div>
+    <!-- Câu hỏi 95 -->
+    <div class="question-block">
+        <h3>95. Khi nói về chức năng của các nhà cung cấp dịch vụ Internet ở Việt Nam, có 2 phát biểu như sau:</h3>
+        <p>- PB1: OSP cấp quyền truy cập Internet qua mạng viễn thông và các dịch vụ như: Email, Web, FTP, Telnet, Chat.
+        </p>
+        <p>- PB2: ICP cung cấp các thông tin về: kinh tế, giáo dục, thể thao, chính trị, quân sự (thường xuyên cập nhật
+            thông tin mới theo định kỳ) đưa lên mạng.</p>
+        <h4>Khẳng định nào sau đây là đúng?</h4>
+        <ul>
+            <li class="correct-answer">A. PB1 sai, PB2 đúng</li>
+            <li>B. PB1 sai, PB2 sai</li>
+            <li>C. PB1 đúng, PB2 đúng</li>
+            <li>D. PB1 đúng, PB2 sai</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            OSP là nhà cung cấp dịch vụ ứng dụng Internet (mua bán qua mạng, ngân hàng điện tử,...) và ICP cung cấp
+            thông tin về nhiều lĩnh vực như kinh tế, giáo dục, thể thao,...
         </div>
+    </div>
 
-        <!-- Câu hỏi 96 -->
-        <div class="question-block">
-            <h3>96. Khẳng định nào sau đây là sai?</h3>
-            <ul>
-                <li>A. Các mạng máy tính liên kết với nhau dựa trên bộ giao thức TCP/IP.</li>
-                <li>B. Internet là từ viết tắt của International Terminal Network.</li>
-                <li class="correct-answer">C. Internet là từ viết tắt của Inter-network.</li>
-                <li>D. Internet là một mạng máy tính rất lớn kết nối các mạng máy tính khác nhau trên khắp toàn cầu.</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Internet (Inter-network) là mạng kết nối các mạng máy tính toàn cầu, không phải "International Terminal Network".
-            </div>
+    <!-- Câu hỏi 96 -->
+    <div class="question-block">
+        <h3>96. Khẳng định nào sau đây là sai?</h3>
+        <ul>
+            <li>A. Các mạng máy tính liên kết với nhau dựa trên bộ giao thức TCP/IP.</li>
+            <li>B. Internet là từ viết tắt của International Terminal Network.</li>
+            <li class="correct-answer">C. Internet là từ viết tắt của Inter-network.</li>
+            <li>D. Internet là một mạng máy tính rất lớn kết nối các mạng máy tính khác nhau trên khắp toàn cầu.</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Internet (Inter-network) là mạng kết nối các mạng máy tính toàn cầu, không phải "International Terminal
+            Network".
         </div>
+    </div>
 
-        <!-- Câu hỏi 97 -->
-        <div class="question-block">
-            <h3>97. Mạng cục bộ LAN là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li>A. Local Address Network</li>
-                <li>B. Link Address Network</li>
-                <li>C. Link Area Network</li>
-                <li class="correct-answer">D. Local Area Network</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                LAN (Local Area Network) là mạng máy tính cục bộ, liên kết các thiết bị trong một phạm vi nhỏ như trong một văn phòng hoặc tòa nhà.
-            </div>
+    <!-- Câu hỏi 97 -->
+    <div class="question-block">
+        <h3>97. Mạng cục bộ LAN là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li>A. Local Address Network</li>
+            <li>B. Link Address Network</li>
+            <li>C. Link Area Network</li>
+            <li class="correct-answer">D. Local Area Network</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            LAN (Local Area Network) là mạng máy tính cục bộ, liên kết các thiết bị trong một phạm vi nhỏ như trong một
+            văn phòng hoặc tòa nhà.
         </div>
+    </div>
 
-        <!-- Câu hỏi 98 -->
-        <div class="question-block">
-            <h3>98. HTML là tên viết tắt của cụm từ nào?</h3>
-            <ul>
-                <li>A. HyperText Media Languages</li>
-                <li>B. HyperText Markup Learn</li>
-                <li>C. HyperText Media Languages</li>
-                <li class="correct-answer">D. HyperText Markup Languages</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                HTML (HyperText Markup Language) là ngôn ngữ đánh dấu siêu văn bản được sử dụng để xây dựng các trang web.
-            </div>
+    <!-- Câu hỏi 98 -->
+    <div class="question-block">
+        <h3>98. HTML là tên viết tắt của cụm từ nào?</h3>
+        <ul>
+            <li>A. HyperText Media Languages</li>
+            <li>B. HyperText Markup Learn</li>
+            <li>C. HyperText Media Languages</li>
+            <li class="correct-answer">D. HyperText Markup Languages</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            HTML (HyperText Markup Language) là ngôn ngữ đánh dấu siêu văn bản được sử dụng để xây dựng các trang web.
         </div>
+    </div>
 
-        <!-- Câu hỏi 99 -->
-        <div class="question-block">
-            <h3>99. Mạng ARPANET hình thành vào khoảng năm nào?</h3>
-            <ul>
-                <li class="correct-answer">A. 1969</li>
-                <li>B. 1979</li>
-                <li>C. 1974</li>
-                <li>D. 1960</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Mạng ARPANET, được hình thành vào năm 1969, là nền tảng của Internet ngày nay.
-            </div>
+    <!-- Câu hỏi 99 -->
+    <div class="question-block">
+        <h3>99. Mạng ARPANET hình thành vào khoảng năm nào?</h3>
+        <ul>
+            <li class="correct-answer">A. 1969</li>
+            <li>B. 1979</li>
+            <li>C. 1974</li>
+            <li>D. 1960</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Mạng ARPANET, được hình thành vào năm 1969, là nền tảng của Internet ngày nay.
         </div>
+    </div>
 
-        <!-- Câu hỏi 100 -->
-        <div class="question-block">
-            <h3>100. Việt Nam hòa vào mạng Internet toàn cầu vào khoảng năm nào?</h3>
-            <ul>
-                <li>A. 1987</li>
-                <li>B. 2000</li>
-                <li class="correct-answer">C. 1990</li>
-                <li>D. 1997</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Việt Nam đã chính thức kết nối với Internet toàn cầu vào ngày 19/11/1997.
-            </div>
+    <!-- Câu hỏi 100 -->
+    <div class="question-block">
+        <h3>100. Việt Nam hòa vào mạng Internet toàn cầu vào khoảng năm nào?</h3>
+        <ul>
+            <li>A. 1987</li>
+            <li>B. 2000</li>
+            <li class="correct-answer">C. 1990</li>
+            <li>D. 1997</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Việt Nam đã chính thức kết nối với Internet toàn cầu vào ngày 19/11/1997.
         </div>
+    </div>
 
-        <!-- Câu hỏi 101 -->
-        <div class="question-block">
-            <h3>101. OSP là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li>A. Offline Service Provider</li>
-                <li>B. Online Search Provider</li>
-                <li class="correct-answer">C. Online Service Provider</li>
-                <li>D. Organization Service Protocol</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                OSP (Online Service Provider) cung cấp các dịch vụ ứng dụng Internet như mua bán, giao dịch ngân hàng, tư vấn, đào tạo.
-            </div>
+    <!-- Câu hỏi 101 -->
+    <div class="question-block">
+        <h3>101. OSP là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li>A. Offline Service Provider</li>
+            <li>B. Online Search Provider</li>
+            <li class="correct-answer">C. Online Service Provider</li>
+            <li>D. Organization Service Protocol</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            OSP (Online Service Provider) cung cấp các dịch vụ ứng dụng Internet như mua bán, giao dịch ngân hàng, tư
+            vấn, đào tạo.
         </div>
+    </div>
 
-        <!-- Câu hỏi 102 -->
-        <div class="question-block">
-            <h3>102. Mạng diện rộng WAN là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li>A. WiMAX Area Network</li>
-                <li>B. Web Area Network</li>
-                <li>C. Wire Area Network</li>
-                <li class="correct-answer">D. Wide Area Network</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                WAN (Wide Area Network) là mạng diện rộng, kết nối các mạng LAN từ xa trên diện rộng như giữa các thành phố hoặc quốc gia.
-            </div>
+    <!-- Câu hỏi 102 -->
+    <div class="question-block">
+        <h3>102. Mạng diện rộng WAN là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li>A. WiMAX Area Network</li>
+            <li>B. Web Area Network</li>
+            <li>C. Wire Area Network</li>
+            <li class="correct-answer">D. Wide Area Network</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            WAN (Wide Area Network) là mạng diện rộng, kết nối các mạng LAN từ xa trên diện rộng như giữa các thành phố
+            hoặc quốc gia.
         </div>
+    </div>
 
-        <!-- Câu hỏi 103 -->
-        <div class="question-block">
-            <h3>103. ICP là viết tắt của cụm từ tiếng Anh nào?</h3>
-            <ul>
-                <li class="correct-answer">A. Internet Content Provider.</li>
-                <li>B. International Communication Protocol.</li>
-                <li>C. International Communication Processing.</li>
-                <li>D. Internet Cab Provider</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                ICP (Internet Content Provider) cung cấp các dịch vụ nội dung Internet như thông tin về kinh tế, giáo dục, thể thao, chính trị,...
-            </div>
+    <!-- Câu hỏi 103 -->
+    <div class="question-block">
+        <h3>103. ICP là viết tắt của cụm từ tiếng Anh nào?</h3>
+        <ul>
+            <li class="correct-answer">A. Internet Content Provider.</li>
+            <li>B. International Communication Protocol.</li>
+            <li>C. International Communication Processing.</li>
+            <li>D. Internet Cab Provider</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            ICP (Internet Content Provider) cung cấp các dịch vụ nội dung Internet như thông tin về kinh tế, giáo dục,
+            thể thao, chính trị,...
         </div>
+    </div>
 
-        <!-- Câu hỏi 104 -->
-        <div class="question-block">
-            <h3>104. Thuật ngữ "Internet" xuất hiện lần đầu vào khoảng năm nào?</h3>
-            <ul>
-                <li>A. 1980</li>
-                <li class="correct-answer">B. 1974</li>
-                <li>C. 1964</li>
-                <li>D. 1984</li>
-            </ul>
-            <div class="explanation">
-                <strong>Giải thích:</strong><br>
-                Thuật ngữ "Internet" lần đầu tiên được sử dụng vào năm 1974 trong khi mạng vẫn được gọi là ARPANET.
-            </div>
+    <!-- Câu hỏi 104 -->
+    <div class="question-block">
+        <h3>104. Thuật ngữ "Internet" xuất hiện lần đầu vào khoảng năm nào?</h3>
+        <ul>
+            <li>A. 1980</li>
+            <li class="correct-answer">B. 1974</li>
+            <li>C. 1964</li>
+            <li>D. 1984</li>
+        </ul>
+        <div class="explanation">
+            <strong>Giải thích:</strong><br>
+            Thuật ngữ "Internet" lần đầu tiên được sử dụng vào năm 1974 trong khi mạng vẫn được gọi là ARPANET.
         </div>
+    </div>
 
 </body>
 
 </html>
+
 <script>
-    // Lấy tất cả đáp án trong câu hỏi
-    const questionBlocks = document.querySelectorAll('.question-block');
+    function searchContent() {
+        var input = document.getElementById('searchBox').value.toLowerCase();
+        var items = document.getElementsByClassName('question-block');
 
-    questionBlocks.forEach(block => {
-        const answers = block.querySelectorAll('li');
-        const explanation = block.querySelector('.explanation');
-
-        answers.forEach(answer => {
-            answer.addEventListener('click', () => {
-                explanation.style.display = 'block';
-            });
-        });
-    });
-</script>   
+        for (var i = 0; i < items.length; i++) {
+            var text = items[i].textContent.toLowerCase();
+            if (text.includes(input)) {
+                items[i].classList.remove('hidden');
+            } else {
+                items[i].classList.add('hidden');
+            }
+        }
+    }
+</script>
